@@ -1,0 +1,5 @@
+<%= form_for @chat do |f| %>
+  <%= f.text_field :user_name, :class => "input_username"%>
+  <%= f.text_field :text, :class => "input_main" %>
+  <%= f.submit 'Send' %>
+<% end %>
