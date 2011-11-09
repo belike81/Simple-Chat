@@ -1,0 +1,16 @@
+<h1><%= @chat.name %></h1>
+
+<div class="chat_window">
+  <% @chat.messages.each do |message| %>
+    <p>
+      <span class="user_name"><%= message.user_name %></span>:
+      <span class="chat_text"><%= message.text %></span>
+    </p>
+  <% end %>
+</div>
+
+<%= form_for @chat.messages.new, :url => { :action => :message } do |f| %>
+  <%= f.text_field :user_name, :class => "input_username"%>
+  <%= f.text_field :text, :class => "input_main" %>
+  <%= f.submit 'Send' %>
+<% end %>

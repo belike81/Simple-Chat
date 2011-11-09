@@ -1,5 +1,10 @@
+<h1>Simple chat application</h1>
+<ul class="chats_list">
+  <% @chats.each do |chat| %>
+    <li><%= link_to chat.name, chat_path(chat) %></li>
+  <% end %>
+</ul>
 <%= form_for @chat do |f| %>
-  <%= f.text_field :user_name, :class => "input_username"%>
-  <%= f.text_field :text, :class => "input_main" %>
-  <%= f.submit 'Send' %>
+  <%= f.text_field :name, :class => "input_main" %>
+  <%= f.submit 'Create' %>
 <% end %>
