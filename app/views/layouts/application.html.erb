@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SimpleChat</title>
+  <title>Simple Chat Application</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header class="center">
+    <h1>Simple Chat Application</h1>
+  </header>
 
-<%= yield %>
+  <section class="center">
+    <%= yield %>
+  </section>
 
-<%= debug(params) if Rails.env.development? %>
+  <footer class="center">
+    <p>Simple Chat Application &copy; <%= Time.now.year %></p>
+    <p>Created by <%= link_to 'Tomasz Grabowski', 'http://www.tomaszgrabowski.com' %>
+    <%= debug(params) if Rails.env.development? %>
+  </footer>
 </body>
 </html>

@@ -3,5 +3,91 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
- *= require_tree . 
+ *= require_tree .
 */
+
+body {
+  font-family: "Helvetica Neue", Arial;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+header {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+section {
+  padding: 20px;
+}
+
+footer {
+  width: 100%;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+.center {
+  width: 1000px;
+  margin: auto;
+}
+
+.empty_list {
+  width: 100%;
+  padding: 7px;
+  text-align: center;
+
+  border: 1px solid #888;
+  background-color: #222;
+  color: #fff;
+}
+
+.button {
+  background-color: rgba(50, 50, 50, 0.9);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 50, 50, 0.9) 0%), to(rgba(30, 30, 30, 0.9) 50%));
+  background-image: -webkit-linear-gradient(top, rgba(50, 50, 50, 0.9) 0%, rgba(30, 30, 30, 0.9) 50%, rgba(20, 20, 20, 0.9) 50%, rgba(0, 0, 0, 0.9) 100%);
+  background-image: -moz-linear-gradient(top, rgba(50, 50, 50, 0.9) 0%, rgba(30, 30, 30, 0.9) 50%, rgba(20, 20, 20, 0.9) 50%, rgba(0, 0, 0, 0.9) 100%);
+  background-image: -ms-linear-gradient(top, rgba(50, 50, 50, 0.9) 0%, rgba(30, 30, 30, 0.9) 50%, rgba(20, 20, 20, 0.9) 50%, rgba(0, 0, 0, 0.9) 100%);
+  background-image: -o-linear-gradient(top, rgba(50, 50, 50, 0.9) 0%, rgba(30, 30, 30, 0.9) 50%, rgba(20, 20, 20, 0.9) 50%, rgba(0, 0, 0, 0.9) 100%);
+  background-image: linear-gradient(top, rgba(50, 50, 50, 0.9) 0%, rgba(30, 30, 30, 0.9) 50%, rgba(20, 20, 20, 0.9) 50%, rgba(0, 0, 0, 0.9) 100%);
+  border: 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 1px 1px 1px 0px rgba(135, 135, 135, 0.1), inset -1px -1px 1px 0px rgba(135, 135, 135, 0.1);
+  -moz-box-shadow: inset 1px 1px 1px 0px rgba(135, 135, 135, 0.1), inset -1px -1px 1px 0px rgba(135, 135, 135, 0.1);
+  -ms-box-shadow: inset 1px 1px 1px 0px rgba(135, 135, 135, 0.1), inset -1px -1px 1px 0px rgba(135, 135, 135, 0.1);
+  -o-box-shadow: inset 1px 1px 1px 0px rgba(135, 135, 135, 0.1), inset -1px -1px 1px 0px rgba(135, 135, 135, 0.1);
+  box-shadow: inset 1px 1px 1px 0px rgba(135, 135, 135, 0.1), inset -1px -1px 1px 0px rgba(135, 135, 135, 0.1);
+  color: #fff;
+  font: lighter 22px "helvetica neue", helvetica, arial, sans-serif;
+  line-height: 1;
+  padding: 12px 0;
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(255, 255, 255, 0.3);
+  width: 150px;
+}
+
+.button:hover {
+  background-color: rgba(70, 70, 70, 0.9);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(70, 70, 70, 0.9) 0%), to(rgba(50, 50, 50, 0.9) 50%));
+  background-image: -webkit-linear-gradient(top, rgba(70, 70, 70, 0.9) 0%, rgba(50, 50, 50, 0.9) 50%, rgba(40, 40, 40, 0.9) 50%, rgba(20, 20, 20, 0.9) 100%);
+  background-image: -moz-linear-gradient(top, rgba(70, 70, 70, 0.9) 0%, rgba(50, 50, 50, 0.9) 50%, rgba(40, 40, 40, 0.9) 50%, rgba(20, 20, 20, 0.9) 100%);
+  background-image: -ms-linear-gradient(top, rgba(70, 70, 70, 0.9) 0%, rgba(50, 50, 50, 0.9) 50%, rgba(40, 40, 40, 0.9) 50%, rgba(20, 20, 20, 0.9) 100%);
+  background-image: -o-linear-gradient(top, rgba(70, 70, 70, 0.9) 0%, rgba(50, 50, 50, 0.9) 50%, rgba(40, 40, 40, 0.9) 50%, rgba(20, 20, 20, 0.9) 100%);
+  background-image: linear-gradient(top, rgba(70, 70, 70, 0.9) 0%, rgba(50, 50, 50, 0.9) 50%, rgba(40, 40, 40, 0.9) 50%, rgba(20, 20, 20, 0.9) 100%);
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: rgba(30, 30, 30, 0.9);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(30, 30, 30, 0.9) 0%), to(rgba(20, 20, 20, 0.9) 50%));
+  background-image: -webkit-linear-gradient(top, rgba(30, 30, 30, 0.9) 0%, rgba(20, 20, 20, 0.9) 50%, rgba(10, 10, 10, 0.9) 50%, rgba(0, 0, 0, 0.9) 100%);
+  background-image: -moz-linear-gradient(top, rgba(30, 30, 30, 0.9) 0%, rgba(20, 20, 20, 0.9) 50%, rgba(10, 10, 10, 0.9) 50%, rgba(0, 0, 0, 0.9) 100%);
+  background-image: -ms-linear-gradient(top, rgba(30, 30, 30, 0.9) 0%, rgba(20, 20, 20, 0.9) 50%, rgba(10, 10, 10, 0.9) 50%, rgba(0, 0, 0, 0.9) 100%);
+  background-image: -o-linear-gradient(top, rgba(30, 30, 30, 0.9) 0%, rgba(20, 20, 20, 0.9) 50%, rgba(10, 10, 10, 0.9) 50%, rgba(0, 0, 0, 0.9) 100%);
+  background-image: linear-gradient(top, rgba(30, 30, 30, 0.9) 0%, rgba(20, 20, 20, 0.9) 50%, rgba(10, 10, 10, 0.9) 50%, rgba(0, 0, 0, 0.9) 100%);
+}
+
