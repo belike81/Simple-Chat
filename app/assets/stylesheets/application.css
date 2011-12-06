@@ -18,6 +18,11 @@ header {
   text-align: center;
 }
 
+header a, header a:visited, header a:visited {
+  color: #c22323;
+  text-decoration: none;
+}
+
 section {
   padding: 20px;
 }
@@ -89,5 +94,9 @@ footer {
   background-image: -ms-linear-gradient(top, rgba(30, 30, 30, 0.9) 0%, rgba(20, 20, 20, 0.9) 50%, rgba(10, 10, 10, 0.9) 50%, rgba(0, 0, 0, 0.9) 100%);
   background-image: -o-linear-gradient(top, rgba(30, 30, 30, 0.9) 0%, rgba(20, 20, 20, 0.9) 50%, rgba(10, 10, 10, 0.9) 50%, rgba(0, 0, 0, 0.9) 100%);
   background-image: linear-gradient(top, rgba(30, 30, 30, 0.9) 0%, rgba(20, 20, 20, 0.9) 50%, rgba(10, 10, 10, 0.9) 50%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+.input {
+  border: 1px solid #eee;
 }
 
