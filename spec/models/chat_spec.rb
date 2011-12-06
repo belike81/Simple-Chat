@@ -1,5 +1,10 @@
 require 'spec_helper'
 
 describe Chat do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "#new" do
+    it "should create a new chat object with given name" do
+      chat = Chat.new('Chat name')
+      chat.should be_an_instance_of(Chat)
+    end
+  end
 end
