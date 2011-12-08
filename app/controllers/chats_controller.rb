@@ -1,4 +1,5 @@
 class ChatsController < ApplicationController
+  before_filter :require_login, :only => [:show, :message]
 
   def index
     @chat = Chat.new
@@ -7,7 +8,6 @@ class ChatsController < ApplicationController
 
   def show
     @chat = Chat.find(params[:id])
-    @username = cookies[:username]
   end
 
   def create

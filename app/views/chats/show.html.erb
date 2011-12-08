@@ -11,11 +11,6 @@
 
 <div class="chat_form">
   <%= form_for @chat.messages.new, :url => { :action => :message } do |f| %>
-    <% if @username %>
-      <%= f.hidden_field :user_name, :value => @username %>
-    <% else %>
-      <%= f.text_field :user_name, :class => "input_username", :placeholder => "Your username" %>
-    <% end %>
     <%= f.text_field :text, :class => "input_chat", :placeholder => "Your message"%>
     <%= f.submit 'Send', :class => "button"%>
   <% end %>

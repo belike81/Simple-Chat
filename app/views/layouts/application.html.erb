@@ -7,8 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header class="center">
-    <h1><%= link_to 'Simple Chat Application', root_path %></h1>
+  <header>
+    <div class="user_nav">
+      <div class="center">
+        <% if current_user %>
+          Logged in as <%= current_user.email %>. (<%= link_to 'Log out', logout_path %>)
+        <% else %>
+          <%= link_to 'Sign up', signup_path %> or <%= link_to 'log in', login_path %>.
+        <% end %>
+      </div>
+    </div>
+    <div class="center">
+      <%= link_to image_tag('simple_chat_logo.png'),  root_path %>
+    </div>  
   </header>
 
   <section class="center">

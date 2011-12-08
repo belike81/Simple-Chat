@@ -1,19 +1,25 @@
 <% unless @chats.empty? %>
   <h1>Choose your chat</h1>
-  <ul class="chats_list">
+  <dl class="chats_list">
     <% @chats.each do |chat| %>
-      <li><h2><%= link_to chat.name, chat_path(chat) %></h2></li>
+      <a href="<%= chat_path(chat) %>">
+        <dt><h2><%= chat.name %></h2></dt>
+        <dd><%= chat.description %></dd>
+      </a>
     <% end %>
-  </ul>
+  </dl>
 <% else %>
   <div class="empty_list">
-    <p>Not chats have yet been created.</p> 
+    <p>Not chats have yet been created.</p>
   </div>
 <% end %>
 <div class="new_chat_form">
-  <h2>Create a new chat</h2>
+  <h1>Create a new chat</h1>
   <%= form_for @chat do |f| %>
+    <%= f.label :name, "Name:" %>
     <%= f.text_field :name, :class => "input_main" %>
+    <%= f.label :description, "Description:" %>
+    <%= f.text_field :description, :class => "input_main" %>
     <%= f.submit 'Create', :class => "button"%>
   <% end %>
 </div>
