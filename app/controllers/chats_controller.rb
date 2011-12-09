@@ -15,7 +15,8 @@ class ChatsController < ApplicationController
     if @chat.save
       redirect_to :back, :flash => { :success => "Chat has been created successfully" }
     else
-      index
+      @chats = Chat.all
+      render :index
     end
   end
 
