@@ -23,6 +23,7 @@
   </header>
 
   <section class="center">
+    <%= render :partial => "shared/flash", :locals => { :flash => flash } %>
     <%= yield %>
   </section>
 

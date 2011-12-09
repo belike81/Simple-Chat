@@ -16,10 +16,11 @@
 <div class="new_chat_form">
   <h1>Create a new chat</h1>
   <%= form_for @chat do |f| %>
+    <%= render :partial => "shared/errors", :locals => { :object => @chat } %>
     <%= f.label :name, "Name:" %>
     <%= f.text_field :name, :class => "input_main" %>
     <%= f.label :description, "Description:" %>
     <%= f.text_field :description, :class => "input_main" %>
-    <%= f.submit 'Create', :class => "button"%>
+    <%= f.submit 'Create', :class => "button" %>
   <% end %>
 </div>

@@ -13,7 +13,7 @@ class ChatsController < ApplicationController
   def create
     @chat = Chat.new(params[:chat])
     if @chat.save
-      redirect_to :back, :flash => { :success => "Chat has been created successfully" }
+      redirect_to :back, :notice => "Chat has been created successfully"
     else
       @chats = Chat.all
       render :index
@@ -26,9 +26,9 @@ class ChatsController < ApplicationController
 
     if @message.save
       cookies[:username] = params[:message][:user_name]
-      redirect_to :back, :flash => { :success => "Message added" }
+      redirect_to :back, :notice => "Message added"
     else
-      redirect_to :back, :flash => { :failure => "Couldn't add the message"}
+      redirect_to :back, :alert => "Couldn't add the message"
     end
   end
 

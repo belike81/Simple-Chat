@@ -14,7 +14,6 @@
 }
 
 $font-color: #444;
-
 .chat_window {
   height: 400px;
 
@@ -98,22 +97,12 @@ $font-color: #444;
   margin-top: 20px;
 
   .input_main {
-    width: 100%;
-
-    padding: 7px;
-    font-size: 1.6em;
+    width: 90%;
   }
 
   input[type="submit"] {
     display: block;
     margin-top: 10px;
-  }
-
-  label {
-    display: block;
-
-    font-size: 1.6em;
-    line-height: 1.8em;
   }
 }
 

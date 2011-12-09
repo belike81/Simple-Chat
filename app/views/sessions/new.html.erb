@@ -2,16 +2,16 @@
 
 <%= form_tag sessions_path do %>
   <div class="form_field">
-    <%= label_tag :email %>
+    <%= label_tag :email, "Email:" %>
     <%= text_field_tag :email, params[:email] %>
   </div>
 
   <div class="form_field">
-    <%= label_tag :password %>
+    <%= label_tag :password, "Password:" %>
     <%= password_field_tag :password %>
   </div>
 
   <div class="form_actions">
-    <%= submit_tag "Log in" %>
+    <%= submit_tag "Log in", :class => "button" %>
   </div>
 <% end %>

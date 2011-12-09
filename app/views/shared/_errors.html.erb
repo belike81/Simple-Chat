@@ -1,0 +1,11 @@
+<% if object.errors.any? %>
+  <div class="flash_message errors">
+    <h2><%= pluralize(object.errors.count, "error") %> found!</h2>
+    <p>Sorry, but you have errors in your form:</p>
+    <ul>
+      <% object.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
