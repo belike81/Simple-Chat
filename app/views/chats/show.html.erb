@@ -3,7 +3,7 @@
 <div class="chat_window">
   <% @chat.messages.each do |message| %>
     <p>
-      <span class="user_name"><%= message.user_name %></span>:
+      <span class="user_name"><%= message.user.user_name unless message.user == nil %></span>:
       <span class="chat_text"><%= message.text %></span>
     </p>
   <% end %>
@@ -11,6 +11,7 @@
 
 <div class="chat_form">
   <%= form_for @chat.messages.new, :url => { :action => :message } do |f| %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
     <%= f.text_field :text, :class => "input_chat", :placeholder => "Your message"%>
     <%= f.submit 'Send', :class => "button"%>
   <% end %>

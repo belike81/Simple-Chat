@@ -25,7 +25,6 @@ class ChatsController < ApplicationController
     @message = @chat.messages.new(params[:message])
 
     if @message.save
-      cookies[:username] = params[:message][:user_name]
       redirect_to :back, :notice => "Message added"
     else
       redirect_to :back, :alert => "Couldn't add the message"
